@@ -1,44 +1,51 @@
+// Functinos
+
+// Show
+function display_inline(class_name) {
+
+    let get_odj = document.getElementsByClassName(class_name);
+
+    // HTMLCollectino >> Array
+    elements = Array.from(get_odj);
+
+    for (let i = 0; i < elements.length; i++) {
+        let tmp_item = elements[i];
+        tmp_item.style.display = 'inline';
+    };
+};
+
+// Hide
+function display_none(class_name) {
+
+    let get_odj = document.getElementsByClassName(class_name);
+
+    // HTMLCollectino >> Array
+    elements = Array.from(get_odj);
+
+    for (let i = 0; i < elements.length; i++) {
+        let tmp_item = elements[i];
+        tmp_item.style.display = 'none';
+    };
+};
+
+
+
+// ----------------------------------------
+
+
 // All Numbers
 document.getElementById("b_all").onclick = function() {
 
     console.log("All-Button, onclick");
 
+    // Odd : Show
+    display_inline("odd")
 
-    // Odd
-    get_odd = document.getElementsByClassName("odd");
-
-    // HTMLCollectino >> Array
-    elements = Array.from(get_odd);
-
-    for (let i = 0; i < elements.length; i++) {
-        var tmp_item = elements[i];
-        tmp_item.style.display = 'inline';
-    };
-
-
-    // Even
-    get_odd = document.getElementsByClassName("even");
-
-    // HTMLCollectino >> Array
-    elements = Array.from(get_odd);
-
-    for (let i = 0; i < elements.length; i++) {
-        var tmp_item = elements[i];
-        tmp_item.style.display = 'inline';
-    };
-
+    // Even : Show
+    display_inline("even");
 
     // Prime
-    get_prime = document.getElementsByClassName("prime");
-
-    // HTMLCollectino >> Array
-    elements = Array.from(get_prime);
-
-    for (let i = 0; i < elements.length; i++) {
-        var tmp_item = elements[i];
-        tmp_item.style.display = 'inline';
-    };
-
+    display_inline("prime");
 
 };
 
@@ -51,42 +58,14 @@ document.getElementById("b_odd").onclick = function() {
 
     console.log("Odd-Button, onclick");
 
+    // Even : Hide
+    display_none("even");
 
-    // Even
-    get_odd = document.getElementsByClassName("even");
+    // Prime : Hide
+    display_none("prime");
 
-    // HTMLCollectino >> Array
-    elements = Array.from(get_odd);
-
-    for (let i = 0; i < elements.length; i++) {
-        var tmp_item = elements[i];
-        tmp_item.style.display = 'none';
-    };
-
-
-    // Prime
-    get_prime = document.getElementsByClassName("prime");
-
-    // HTMLCollectino >> Array
-    elements = Array.from(get_prime);
-
-    for (let i = 0; i < elements.length; i++) {
-        var tmp_item = elements[i];
-        tmp_item.style.display = 'none';
-    };
-
-
-    // Odd << Overwrite
-    get_odd = document.getElementsByClassName("odd");
-
-    // HTMLCollectino >> Array
-    elements = Array.from(get_odd);
-
-    for (let i = 0; i < elements.length; i++) {
-        var tmp_item = elements[i];
-        tmp_item.style.display = 'inline';
-    };
-
+    // Odd : Show << Overwrite
+    display_inline("odd");
 
 };
 
@@ -99,41 +78,14 @@ document.getElementById("b_even").onclick = function() {
 
     console.log("Even-Button, onclick");
 
+    // Odd : Hide
+    display_none("odd");
 
-    // Odd
-    get_odd = document.getElementsByClassName("odd");
+    // Prime : Hide
+    display_none("prime");
 
-    // HTMLCollectino >> Array
-    elements = Array.from(get_odd);
-
-    for (let i = 0; i < elements.length; i++) {
-        var tmp_item = elements[i];
-        tmp_item.style.display = 'none';
-    };
-
-
-    // Prime
-    get_prime = document.getElementsByClassName("prime");
-
-    // HTMLCollectino >> Array
-    elements = Array.from(get_prime);
-
-    for (let i = 0; i < elements.length; i++) {
-        var tmp_item = elements[i];
-        tmp_item.style.display = 'none';
-    };
-
-
-    // Even << Overwrite
-    get_even = document.getElementsByClassName("even");
-
-    // HTMLCollectino >> Array
-    elements = Array.from(get_even);
-
-    for (let i = 0; i < elements.length; i++) {
-        var tmp_item = elements[i];
-        tmp_item.style.display = 'inline';
-    };
+    // Even : Show << Overwrite
+    display_inline("even");
 
 };
 
@@ -146,40 +98,13 @@ document.getElementById("b_prime").onclick = function() {
 
     console.log("Prime-Button, onclick");
 
+    // Odd : Hide
+    display_none("odd");
 
-    // Odd
-    get_odd = document.getElementsByClassName("odd");
+    // Even : Hide
+    display_none("even");
 
-    // HTMLCollectino >> Array
-    elements = Array.from(get_odd);
-
-    for (let i = 0; i < elements.length; i++) {
-        var tmp_item = elements[i];
-        tmp_item.style.display = 'none';
-    };
-
-
-    // Even
-    get_even = document.getElementsByClassName("even");
-
-    // HTMLCollectino >> Array
-    elements = Array.from(get_even);
-
-    for (let i = 0; i < elements.length; i++) {
-        var tmp_item = elements[i];
-        tmp_item.style.display = 'none';
-    };
-
-
-    // Prime << Overwrite
-    get_prime = document.getElementsByClassName("prime");
-
-    // HTMLCollectino >> Array
-    elements = Array.from(get_prime);
-
-    for (let i = 0; i < elements.length; i++) {
-        var tmp_item = elements[i];
-        tmp_item.style.display = 'inline';
-    };
+    // Prime : Show << Overwrite
+    display_inline("prime");
 
 };
